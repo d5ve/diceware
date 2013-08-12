@@ -1,0 +1,76 @@
+=head1 NAME
+
+diceware - simple script to generate good random passphrases
+    
+=head1 DESCRIPTION
+
+diceware is a computer implementation of the real-world secure passphrase
+generation system which uses dice rolls to generate randomness. This system is
+described at http://world.std.com/~reinhold/diceware.html
+
+This script uses the /dev/random device (via Crypt::Random) for true
+randomness. /dev/random maintains a small pool of entropy, and once it is used
+up, there may be a wait for more to build up. This means that the diceware
+script may take some minutes to generate a long passphrase.
+
+The script prints the words to STDOUT.
+
+There are 7776 short words in the diceware list, giving 2.6 x 10^19
+possibilities for a five word passphrase. In theory, this passphrase should be
+easier to remember than the equivilent strength 10 random character word.
+
+e.g. 
+    ernest sol abate gx domino
+v.s.
+    <td&,.L[6v
+
+=head1 SYNOPSIS
+
+    diceware [options]
+
+        Options: 
+                --help     brief help message - default behaviour
+                --man      full documentation
+                --words=NN REQUIRED: number of words in the passphrase
+
+=head1 OPTIONS
+
+=over 8
+
+=item B<--help>
+
+    Print a brief help message and exits. This mode is the default behaviour.
+
+=item B<--man>
+
+    Prints the manual page and exits.
+
+=item B<--words=NN>
+
+    REQUIRED:
+
+    The number of words in the generated passphrase.
+    For security this should be at least five, giving an entropy of at least 64.6 bits.
+    Six words have 77.5 bits, seven words 90.4 bits, eight words 103 bits.
+
+=back
+
+=head1 AUTHOR
+
+Dave Webb L<diceware.github@d5ve.com|mailto:diceware.github@d5ve.com>
+
+=head1 LICENSE
+
+B<diceware> is free software. It comes without any warranty, to the extent
+permitted by applicable law.
+
+B<diceware> is licensed under the Creative Commons Attribution 3.0 Unported
+License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative
+Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+B<diceware> contains the wordlist from
+http://world.std.com/~reinhold/diceware.wordlist.asc which is also licensed
+under Creative Commons Attribution 3.0 Unported License by A G Reinhold.
+
+=cut

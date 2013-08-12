@@ -1,0 +1,12 @@
+diceware is free software. It comes without any warranty, to the extent
+permitted by applicable law.
+
+diceware is licensed under the Creative Commons Attribution 3.0 Unported
+License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative
+Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+diceware contains the wordlist from
+http://world.std.com/~reinhold/diceware.wordlist.asc which is also licensed
+under Creative Commons Attribution 3.0 Unported License by A G Reinhold.
+
