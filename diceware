@@ -114,8 +114,10 @@ for ( my $i = 0 ; $i < $words ; $i ++ ) {
         $five_rolls .= "$roll";
     }
     my $word = $word_list->{"$five_rolls"};
-    print "$word\n";
+    print "$word ";
 }
+
+print "\n";
 
 exit;
 
